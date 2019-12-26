@@ -1,3 +1,3 @@
 # framework-educativo-docker-compose
-docker-compose run -d
+docker-compose run -d \n
 docker-compose down
