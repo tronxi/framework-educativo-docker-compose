@@ -4,9 +4,7 @@ services:
         container_name: framework-educativo-front
         image: framework-educativo-front:latest
         build: 
-            context: https://${token}:x-oauth-basic@github.com/tronxi/framework-educativo-front.git#develop
-            args: 
-                - token=${token}
+            context: https://github.com/tronxi/framework-educativo-front.git#develop
         ports:
             - "80:80"
         env_file: .env
@@ -17,11 +15,9 @@ services:
         container_name: framework-educativo-eureka
         image: framework-educativo-eureka:latest
         build: 
-            context: https://${token}:x-oauth-basic@github.com/tronxi/framework-educativo-eureka.git#develop
-            args: 
-                - token=${token}
+            context: https://github.com/tronxi/framework-educativo-eureka.git#develop
         ports:
-            - "8762:8762"
+            - "8761:8761"
         env_file: .env
         networks: 
             - framework-educativo-net
@@ -30,9 +26,7 @@ services:
         container_name: framework-educativo-gateway
         image: framework-educativo-gateway:latest
         build: 
-            context: https://${token}:x-oauth-basic@github.com/tronxi/framework-educativo-gateway.git#develop
-            args: 
-                - token=${token}
+            context: https://github.com/tronxi/framework-educativo-gateway.git#develop
         ports:
             - "8079:8079"
         env_file: .env
@@ -43,10 +37,7 @@ services:
         container_name: framework-educativo-user
         image: framework-educativo-user:latest
         build: 
-            context: https://${token}:x-oauth-basic@github.com/tronxi/framework-educativo-user.git#develop
-            args: 
-                - token=${token}
-                - clave=${clave}
+            context: https://github.com/tronxi/framework-educativo-user.git#develop
         ports:
             - "8081:8081"
         env_file: .env
@@ -57,10 +48,7 @@ services:
         container_name: framework-educativo-subject
         image: framework-educativo-subject:latest
         build: 
-            context: https://${token}:x-oauth-basic@github.com/tronxi/framework-educativo-subject.git#develop
-            args: 
-                - token=${token}
-                - clave=${clave}
+            context: https://github.com/tronxi/framework-educativo-subject.git#develop
         ports:
             - "8082:8082"
         env_file: .env
@@ -71,10 +59,7 @@ services:
         container_name: framework-educativo-zuul
         image: framework-educativo-zuul:latest
         build: 
-            context: https://${token}:x-oauth-basic@github.com/tronxi/framework-educativo-zuul.git#develop
-            args: 
-                - token=${token}
-                - clave=${clave}
+            context: https://github.com/tronxi/framework-educativo-zuul.git#develop
         ports:
             - "8070:8070"
         env_file: .env
