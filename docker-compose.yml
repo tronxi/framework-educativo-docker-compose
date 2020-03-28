@@ -5,6 +5,8 @@ services:
         image: framework-educativo-front:latest
         build: 
             context: https://github.com/tronxi/framework-educativo-front.git#develop
+            args:
+                - ENVIRONMENT=docker
         ports:
             - "80:80"
         env_file: .env
