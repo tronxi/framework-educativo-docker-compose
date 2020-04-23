@@ -67,6 +67,15 @@ services:
         env_file: .env
         networks: 
             - framework-educativo-net
+    framework-educativo-rabbit:
+        container_name: framework-educativo-rabbit
+        image: rabbitmq:management
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+        env_file: .env
+        networks: 
+            - framework-educativo-net
 
 networks: 
     framework-educativo-net:
