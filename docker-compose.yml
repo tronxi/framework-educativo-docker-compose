@@ -56,6 +56,17 @@ services:
         env_file: .env
         networks: 
             - framework-educativo-net
+
+    framework-educativo-activity:
+        container_name: framework-educativo-activity
+        image: framework-educativo-activity:latest
+        build: 
+            context: https://github.com/tronxi/framework-educativo-activity.git#develop
+        ports:
+            - "8083:8083"
+        env_file: .env
+        networks: 
+            - framework-educativo-net
     
     framework-educativo-zuul:
         container_name: framework-educativo-zuul
