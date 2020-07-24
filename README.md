@@ -1,4 +1,7 @@
 # framework-educativo-docker-compose
-docker-compose run -d
+# up
+docker-compose up -d
 # stop
 docker-compose down
+# build
+docker-compose build
